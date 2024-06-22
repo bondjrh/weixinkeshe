@@ -1,0 +1,25 @@
+<view class="top">
+<text>按科室找</text>
+</view>
+
+<view class="down" wx:for="{{doctors}}">
+  <view class="left">
+  <image style="margin: 15%;height: 80rpx;width: 80rpx;border-radius: 100%;" src="{{item.image}}" mode="aspectFill"/>
+  </view>
+
+<view class="right">
+<view>
+<text style="font-weight: bold;font-size: large;">{{item.name}}</text>
+<text style="color: #21ACF7;margin-left: 5%;">{{item.position}}</text>
+</view>
+
+<view style="margin-top: 8%;color: #000000;">{{item.intro}}</view>
+
+<view style="display: flex;margin-top: 5%;">
+<view style="color: #21ACF7;margin-top: 2%;width: 15%;">{{item.depart}}</view>
+<button style="color: white;background-color: #F0753F;border-radius: 20rpx;height: 60rpx;width: 250rpx;margin-left: 40%;">我要挂号</button>
+</view>
+
+</view>
+
+</view>

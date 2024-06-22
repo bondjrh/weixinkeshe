@@ -1,0 +1,109 @@
+page{
+  background-color: #DDDBDB;
+}
+
+.jianjie {
+  border: solid;
+  height: 200rpx;
+  margin: 5rpx;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.left{
+  width: 20%;
+}
+
+.left view{
+  width: 100rpx;
+  border: 5rpx solid #59B4FD;
+  border-radius: 25rpx;
+  font-size: small;
+  color: #59B4FD;
+  display: flex;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+.jianjie image {
+  height: 74rpx;
+  width: 74rpx;
+  margin: 40rpx 0 0 40rpx;
+  border-radius: 50rpx;
+}
+
+.right{
+  width: 80%;
+}
+
+.down{
+  display: flex;
+  flex-direction: column;
+}
+
+.down text{
+  font-size: x-small;
+}
+
+.fuwu{
+  height: 336rpx;
+  border: solid;
+  margin: 20rpx 5rpx 20rpx 5rpx;
+  padding: 2%;
+  background-color: #ffffff;
+}
+
+.top{
+  color: #59B4FD;
+  border-bottom: solid grey;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.fangshi{
+  margin-top: 20rpx;
+}
+
+.tuwen{
+  display: flex;
+}
+
+#left{
+  width: 15%;
+}
+
+.tuwen image{
+  height: 72rpx;
+  width: 74rpx;
+  border-radius: 100%;
+}
+
+#right{
+  width: 85%;
+  display: flex;
+}
+
+.shipin{
+  display: flex;
+  margin-top: 10%;
+}
+
+.shipin image{
+  height: 72rpx;
+  width: 74rpx;
+  border-radius: 100%;
+}
+
+.pingjia{
+  height: 372rpx;
+  border: solid;
+  margin: 5rpx;
+  padding: 2%;
+  background-color: #ffffff;
+}
+
+
+
+
+
+
