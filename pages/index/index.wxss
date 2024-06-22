@@ -1,0 +1,68 @@
+.lun{
+  padding: 10px 15px;
+}
+#flex{
+  display: flex;
+}
+.gua{
+  display: flex;
+  width: 190px;
+  padding: 10rpx;
+  margin: 5px;
+  background-color: #FCEFF0;
+  border: 1px #eee solid;
+  border-radius: 10px;
+}
+.gua1{
+  font-size: 25px;
+  padding: 10rpx;
+  margin: 5px;
+  font-weight: bolder;
+  color: #F46565;
+}
+.gua2{
+  font-size: 15px;
+  padding: 10rpx;
+  margin: 5px;
+  color: #F46565;
+}
+.ding{
+  display: flex;
+  width: 190px;
+  padding: 10rpx;
+  margin: 5px;
+  background-color: #E9FAF2;
+  border: 1px #eee solid;
+  border-radius: 10px;
+}
+.ding1{
+  font-size: 25px;
+  padding: 10rpx;
+  margin: 5px;
+  font-weight: bolder;
+  color: #2ED477;
+}
+.ding2{
+  font-size: 15px;
+  padding: 10rpx;
+  margin: 5px;
+  color: #2ED477;
+}
+.circle {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #FBD3D4;
+  border-radius: 50%;
+}
+.circle1 {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #C2F2D9;
+  border-radius: 50%;
+}
+
+
+
+

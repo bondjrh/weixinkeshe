@@ -1,0 +1,23 @@
+<view class="lun">
+  <swiper indicator-dots style="border: 1px solid blue;" autoplay indicator-active-color="#FF9B9D" indicator-color="#FCEFF0" style="height: 200px;">
+    <swiper-item wx:for="{{images}}" wx:key="images">
+      <image style="width: 398px;height: 200px;" src="{{item.img}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+<view id="flex">
+  <view class="gua">
+    <view>
+      <view class="gua1">预约挂号</view>
+      <view class="gua2">在 线 挂 号 预 约</view>
+    </view>
+    <view class="circle"></view>
+  </view>
+  <view class="ding">
+    <view>
+      <view class="ding1">订单查询</view>
+      <view class="ding2">查 询 预 约 情 况</view>
+    </view>
+    <view class="circle1"></view>
+  </view>
+</view>

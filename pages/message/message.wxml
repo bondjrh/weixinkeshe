@@ -1,0 +1,52 @@
+<!--pages/message/message.wxml-->
+<view class="content">
+  <view style="border-bottom: solid 2px #ccc;">
+    <view style="display: flex;align-items: center;margin-bottom: 5px;">
+      <image src="../../images/挂号/5.png" mode="aspectFill" style="width: 50px;height: 50px;" />
+      <view style="margin: 0 10px;font-weight: bold;">阿冰</view>
+      <view style="margin: 0 10px;font-size: 13px;color: #ccc;">主治医师</view>
+    </view>
+  </view>
+  <view class="style1">
+    <view class="style2">就诊医院 </view>
+    <view class="style3">从化第一附属医院</view>
+  </view>
+  <view class="style1">
+    <view class="style2">就诊地址 </view>
+    <view class="style3">从化区广从南路</view>
+  </view>
+  <view class="style1">
+    <view class="style2">就诊科室 </view>
+    <view class="style3">消化科</view>
+  </view>
+  <view class="style1">
+    <view class="style2">就诊时间 </view>
+    <view class="style3">2024/06/22 周一 上午</view>
+  </view>
+  <view class="style1">
+    <view class="style2">费用 </view>
+    <view style="color: red;margin:10px 10px 10px 32px;font-size: 13px;">¥60</view>
+  </view>
+  <view style="display: flex;">
+    <view class="style2">预约时间 </view>
+    <view class="style3">2024/06/22 周一 上午</view>
+  </view>
+</view>
+
+<view class="bond">
+  <view style="display: flex;">
+    <view style="margin:0px 10px 8px 0;font-size: 13px;color: #ccc;">就诊人 </view>
+    <view style="margin:0px 10px 8px 32px;font-size: 13px;">嘿嘿嘿</view>
+  </view>
+  <view style="display: flex;">
+    <view style="margin:0px 10px 0px 0;font-size: 13px;color: #ccc;">身份证号 </view>
+    <view style="margin:0px 10px 0px 18px;font-size: 13px;">4451849545148484</view>
+  </view>
+</view>
+<view style="display: flex;margin-top: 150px;">
+  <view style="color: #ccc;font-size: 10px;margin-left: 20px;">挂号前仔细阅读</view>
+  <view style="color: blue;font-size: 10px;">《挂号须知》</view>
+</view>
+<view>
+  <button style="background-color: blue;color: white;width: 90%;margin: 5px;padding: 10px;margin-left: 18px;">确认预约</button>
+</view>
