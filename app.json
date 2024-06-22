@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/my/my",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/register/register",
+    "pages/interrogation/interrogation"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -1,4 +1,5 @@
 {
+  "cloudfunctionRoot": "cloudFunction/",
   "compileType": "miniprogram",
   "libVersion": "trial",
   "packOptions": {
