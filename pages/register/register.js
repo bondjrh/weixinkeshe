@@ -6,7 +6,41 @@ Page({
    * 页面的初始数据
    */
   data: {
+    sValue:"",//查询的内容
     doctors: []
+  },
+  
+  //查询科室
+  // getContext(){
+  //   db.collection("notices").where({
+  //     "depart": this.data.sValue
+  //   }).get().then(res => {
+  //     this.setData({
+        
+  //     })
+  //   })
+  // },
+
+  // 输入框失去焦点时，筛选科室
+  searchDepart: function (e) {
+    this.setData({
+      sValue: e.detail.value
+    })
+    db.collection("doctors").where({
+      "depart": this.data.sValue
+    }).get().then(res => {
+      this.setData({
+        doctors:res.data
+      })
+    })
+  },
+
+  //通过图片跳转到问诊页面，同时将数据库中相关的数据传到问诊页面
+  goToDetail: function (e) {
+    let image = e.currentTarget.dataset.image
+    wx.navigateTo({
+      url: '../interrogation/interrogation?image=' + image,
+    })
   },
 
   /**

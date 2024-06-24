@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/interrogation/interrogation",
+          "pathName": "pages/interrogation/interrogation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/register/register",
           "pathName": "pages/register/register",
           "query": "",

@@ -1,17 +1,18 @@
-<view class="jianjie">
+<view class="jianjie" wx:for="{{doctors}}">
   <view class="left">
-    <image src="../../images/avatar.jpg" mode="" />
-    <view>简介</view>
+    <image src="{{item.image}}" mode="" />
+    <!-- <view>简介</view> -->
   </view>
   <view class="right">
     <view class="up">
-      <text>医生名字</text>
-      <text style="color: #59B4FD;margin-left: 5%;font-size: x-small;">[消化科科主任]</text>
+      <text style="margin-top: 5%;">{{item.name}}</text>
+      <text style="color: #59B4FD;margin-left: 5%;font-size: x-small;margin-top: 6%;">{{item.position}}</text>
+      <view style="margin-left: 25%;">
+        <image style="height: 30rpx;width: 30rpx;margin-left: 0;" class="image-item" wx:for="{{starsBox}}" wx:key="index" wx:for-index="index" wx:for-item="{{item}}" data-index="{{index}}" bindtap="changePic" src="{{index<=answer? '../../images/star.png' : '../../images/star1.png'}}"></image>
+      </view>
     </view>
     <view class="down">
-      <text>12345567890</text>
-      <text>医生简介医生简介医生简介医生简介医生简介医生简介医生简介医生简介医生简介医生简介医生简介</text>
-      <text style="color: #59B4FD;display: flex;justify-content: center;margin-top: 5%;">查看更多</text>
+      <text style="font-size: medium;">{{item.intro}}</text>
     </view>
   </view>
 </view>
@@ -28,7 +29,7 @@
           <view style="font-weight: bold;">图文问诊</view>
           <view style="font-weight: bold;color: grey;font-size: x-small;">使用图文，语音与医生沟通</view>
         </view>
-        <view style="font-size: smaller;color: #F9BB7F;margin: 5% 0 0 42%;">10￥/次</view>
+        <view bind:tap="payPictureService" style="font-size: smaller;color: #F9BB7F;margin: 5% 0 0 42%;">10￥/次</view>
       </view>
     </view>
     <view class="shipin">
@@ -40,7 +41,7 @@
           <view style="font-weight: bold;">视频问诊</view>
           <view style="font-weight: bold;color: grey;font-size: x-small;">预约时间与医生进行视频问诊</view>
         </view>
-        <view style="font-size: smaller;color: #F9BB7F;margin: 5% 0 0 39%;">50￥/次</view>
+        <view bind:tap="payVideoService" style="font-size: smaller;color: #F9BB7F;margin: 5% 0 0 39%;">50￥/次</view>
       </view>
     </view>
   </view>
@@ -51,20 +52,29 @@
 
   <view style="margin-top: 30rpx;">
     <text style="font-size: small;">王**</text>
-    <view>
-      <text style="color: grey;font-size: small;font-weight: bold;">很好的医生，使我的病情反复旋转👍</text>
+    <view style="display: flex;">
+      <text style="color: grey;font-size: small;font-weight: bold;width: 55%;">很好的医生，使我的病情反复旋转👍</text>
+      <view style="width: 45%;">
+        <image wx:if="{{show}}" bind:tap="dianZan" style="height: 40rpx;width: 40rpx;margin-left: 90%;" src="../../images/like.png" mode="aspectFill" />
+        <image wx:else bind:tap="cancelDianZan" style="height: 40rpx;width: 40rpx;margin-left: 90%;"  src="../../images/likefull.png" mode="aspectFill" />
+      </view>
     </view>
     <text style="color: grey;font-size: small;font-weight: bold;">2024/08/09</text>
   </view>
 
   <view style="margin-top: 30rpx;">
     <text style="font-size: small;">林**</text>
-    <view>
-      <text style="color: grey;font-size: small;font-weight: bold;">蹦极了，下次还来！</text>
+    <view style="display: flex;">
+      <text style="color: grey;font-size: small;font-weight: bold;width: 55%;">蹦极了，下次还来！</text>
+      <view style="width: 45%;">
+        <image wx:if="{{show1}}" bind:tap="dianZan1" style="height: 40rpx;width: 40rpx;margin-left: 90%;" src="../../images/like.png" mode="aspectFill" />
+        <image wx:else bind:tap="cancelDianZan1"  style="height: 40rpx;width: 40rpx;margin-left: 90%;" src="../../images/likefull.png" mode="aspectFill" />
+      </view>
     </view>
     <text style="color: grey;font-size: small;font-weight: bold;">2024/09/19</text>
   </view>
 
 </view>
 
-<button style="margin-top: 340rpx;width: 95%;background-color: #59B4FD;color: #ffffff;">⭐收藏</button>
+<button bind:tap="collect" wx:if="{{hidden}}" style="margin-top: 340rpx;width: 95%;background-color: #59B4FD;color: #ffffff;">⭐收藏</button>
+<button bind:tap="collect" wx:else style="margin-top: 340rpx;width: 95%;background-color: #59B4FD;color: #ffffff;">⭐已收藏</button>
